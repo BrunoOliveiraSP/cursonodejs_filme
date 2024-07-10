@@ -1,10 +1,10 @@
 import { salvarFilme, consultarFilmePorNome } from "../../repository/filmeRepository.js"; 
-import { validarNovoFilme, validarFilmeIgual } from "../../validation/filme/filmeValidation.js";
+import { validarCamposObrigatoriosFilme, validarFilmeIgual } from "../../validation/filme/filmeValidation.js";
 
 
 export default async function salvarFilmeService(filmeObj) {
     // validacao de campos obrigatórios
-    validarNovoFilme(filmeObj);
+    validarCamposObrigatoriosFilme(filmeObj);
 
     // busca filmes com o mesmo nome
     // valida se existe filme com mesmo nome
