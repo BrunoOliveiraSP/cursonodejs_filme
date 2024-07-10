@@ -26,3 +26,9 @@ export function validarFilmeUnico(registros) {
     if (registros.length == 0)
         throw new Error('Filme não encontrado.');
 }
+
+export function validarFilmeIgual(registros) {
+    if (registros.length > 0)
+        throw new Error('Já existe filme cadastrado com esse nome');
+}
+
