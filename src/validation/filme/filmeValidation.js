@@ -20,3 +20,9 @@ export function validarNovoFilme(filmeObj) {
         throw new Error('Disponível do filme obrigatório.');
 
 }
+
+
+export function validarFilmeUnico(registros) {
+    if (registros.length == 0)
+        throw new Error('Filme não encontrado.');
+}
